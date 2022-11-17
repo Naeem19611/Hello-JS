@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Handler</title>
+</head>
+<body>
+    <h1>Exploring Events</h1>
+    <button onclick="handleClick()">Click Me</button>
+    <button onmousemove="mouseMove()">Click Me</button>
+    <button id="third">click me-1</button>
+    <button>click me-2</button>
+    <button id="lastperson">click me-3</button>
+    <button class="item">click me-3</button>
+    <button id="addNew">Add New Button</button>
+    <script>
+        // function handleClick () {
+        //     console.log(new Date());
+        // }
+        // function mouseMove () {
+        //     console.log('How can i help you????');
+        // }
+        // function handleClick() {
+        //     document.body.style.background = 'cyan';
+        // }
+
+        // const thirdButton = document.getElementById('third');
+        // thirdButton.onclick = function () { 
+        //     console.log("Third person click");
+        //  }
+
+        // const lastButton = document.getElementById('lastperson')
+        //     .addEventListener('click', function(){
+        //     document.body.style.color = 'red';
+        // }) 
+
+            var items = document.getElementsByClassName('item');
+                for (let i = 0;i < items.length; i++) {
+                    var item = items[i];
+                    item.addEventListener('click', function(event){
+                        // console.log(this, event.target);
+                        event.target.parentNode.removeChild(event.target);
+                    })
+                    
+                }
+
+            document.getElementById('addNew').addEventListener('click', function(event){
+                var itemParent = document.getElementById('myList');
+                var newItem = document.createElement('li');
+                newItem.innerText = 'Brand new item';
+                itemParent.appendChild('newItem');
+            })
+
+    </script>
+</body>
+</html>

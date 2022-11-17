@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore DOM</title>
+</head>
+    <style>
+        article {
+            border: 2px solid crimson;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+<body>
+    <main>
+        <section>
+            <h3>Exploring DOM</h3>
+            <p id="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, non?</p>
+                
+        </section>
+        <section>
+            <article>
+                <h3>article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description"></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero accusamus dolorum similique dignissimos, eaque quisquam necessitatibus illo tempore officiis magni sed maiores cum doloremque nobis asperiores. Pariatur iste ipsum fuga.</p>
+            </article>
+            <article>
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description"></p>
+                <p>Ad suscipit reiciendis vitae doloremque sapiente sint quas assumenda quasi, pariatur non error a obcaecati. Praesentium quos dolorum distinctio deleniti saepe eius, dicta, minus et repellendus voluptatum, assumenda exercitationem velit?</p>
+            </article>
+            <article>
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description"></p>
+                <p>Soluta dolores magnam adipisci tempora fugit fuga sed perferendis aspernatur autem accusantium iste dicta commodi dolor, ad excepturi ipsum porro atque voluptate reprehenderit nam! Earum officia assumenda inventore dolorem eveniet.</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- DOM = Document Object Model -->
+    
+    <script>
+        // var user = {name: "jalali set", song: "kakatua", member: 6};
+        // console.log(document.body);
+        var paragraph=document.getElementById("paragraph");
+        paragraph.style.backgroundColor = 'green';
+        paragraph.style.color = 'white';
+        paragraph.style.fontSize = '20px';
+        paragraph.style.padding = '20px';
+        paragraph.style.textAlign = 'center';
+
+        var author = document.getElementsByClassName("author");
+        for (var i = 0; i < author.length; i++) {
+            var element = author[i];
+            element.style.backgroundColor = 'red';
+        }
+    </script>
+</body>
+</html>
